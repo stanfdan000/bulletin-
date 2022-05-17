@@ -1,1 +1,19 @@
 /* add home page styles here */
+#white-Board {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    background-image: url(../assets/whiteBoard.jpg);
+    height: 550px;
+    width: 750px;
+    border: 5px solid black;
+    min-width: calc(10em + 40px);
+    overflow: scroll;
+}
+
+.gutter-right {
+    margin-right: 5px;
+    margin: top 200px;;
+}
