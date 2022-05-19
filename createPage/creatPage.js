@@ -17,9 +17,9 @@ postItForm.addEventListener('submit', async (e) => {
         description: data.get('description'),
         contact: data.get('contact'),
     };
-    console.log(newPost);
+    (newPost);
     const res = await createPost(newPost);
-    console.log(res);
+    (res);
     location.replace('/');
 });
 
