@@ -10,7 +10,6 @@ redirectIfLoggedIn();
 signUpForm.addEventListener('submit', async (event) => {
     event.preventDefault();
     const data = new FormData(signUpForm);
-    console.log(data.get('password'));
     const user = await signUpUser(data.get('email'), data.get('password'));
     if (user) {
         location.replace('/');
@@ -19,7 +18,8 @@ signUpForm.addEventListener('submit', async (event) => {
 signInForm.addEventListener('submit', async (event) => {
     event.preventDefault();
     const data = new FormData(signInForm);
-    const user = await signInUser(data.get(signInEmail), data.get(signInPassword));
+    const user = await signInUser(data.get('email'), data.get('password'));
+    console.log(user);
     if (user) {
         location.replace('/');
     }

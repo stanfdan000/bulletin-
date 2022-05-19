@@ -8,11 +8,12 @@ export async function getUser() {
 }
 export async function checkAuth() {
     const user = await getUser();
-    if (!user) location.replace('/logInPage');
+    if (!user) location.replace('/');
+    return user;
 }
 export async function redirectIfLoggedIn() {
     if (await getUser()) {
-        location.replace('/logInPage');
+        location.replace('/');
     }
 }
 export async function signUpUser(email, password) {
@@ -27,14 +28,14 @@ export async function logOut() {
     await client.auth.signOut();
     return (window.location.href = '/');
 }
-function checkError({ data, error }) {
-    return error ? console.error(error) : data;
-}
+
+    
+
 export async function getPost() {
-    const resp = await client.from('post').select('*');
-    return checkError(resp);
+    const resp = await client.from('posts').select('*');
+    return resp.data;
 }
-export async function creatPost(post) {
-    const resp = await client.from('post').insert(post);
-    return checkError(resp);
+export async function createPost(post) {
+    const resp = await client.from('posts').insert(post);
+    return resp.data;
 }

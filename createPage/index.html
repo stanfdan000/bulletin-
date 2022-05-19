@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/home.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>create a fun fact!</h1>
+        <div id="nav" class="gutter-right">
+            <button id="LogOut">LogOut</button>
+            <button id="Home">Home</button>
+        </div>
+    </header>
+    <main>
+       <form id="postItForm">
+           <label for="title">
+               <div>Title</div>
+               <input type="text" name="title" id="title"/>
+           </label>
+           <label for="description">
+               <div>Description</div>
+               <input type="description" name="description" id="description"/>
+           </label>
+           <label for="contact">
+               <div>contact</div>
+               <input type="contact" name="contact" id="contact"/>
+           </label>
+           <button>Sssssave!</button>
+        </form>
+    </main>
+    <footer>
+        <div class="copy gutter-right">&copy; 2021 Alchemy Code Lab</div>
+    </footer>
+
+    <script type="module" src="./creatPage.js"></script>
+</body>
+
+</html>
